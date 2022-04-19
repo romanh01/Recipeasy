@@ -11,7 +11,7 @@ session_start();
 
     <title>Recipeasy</title>
 
-    <link rel="stylesheet" href="styles.css">
+    <link rel='stylesheet' href='style.css'>
 
 </head>
 

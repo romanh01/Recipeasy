@@ -17,10 +17,10 @@ include_once 'includes/dbh.inc.php';
             <?php
             if (isset($_SESSION["user_id"])) {
                 $login_page = "myaccount_profile.php";
-                echo "<a href='$login_page'>My Account</a>";
+                echo "<a href='$login_page'>View My Recipeasy Account</a>";
             } else {
                 $profile_page = "myaccount_login.php";
-                echo "<a href='$profile_page'>My Account</a>";
+                echo "<a href='$profile_page'>Login into Your Recipeasy Account</a>";
             }
             ?>
         </div>
@@ -47,13 +47,3 @@ include_once 'includes/dbh.inc.php';
 <?php
 include_once 'footer.php';
 ?>
-
-<!-- <?php
-        $userInsert1 = "INSERT INTO user
-                    (user_name,user_pass)
-                    VALUES
-                    ('Rcredible','guessMe01');";
-
-        $sqlInsert1 = mysqli_query($conn, $user_insert);
-
-        ?> -->
