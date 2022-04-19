@@ -23,7 +23,7 @@ include_once 'includes/dbh.inc.php';
 
         <p2>By clicking the Sign Up button, you agree to our <br>
             &emsp; &emsp; &emsp; &emsp; &ensp;
-            <a href="#">terms & conditions</a> and <a href="#">Privacy Policy</a>
+            <a href="#" style=font-size:10px>terms & conditions</a> and <a href="#" style=font-size:10px>Privacy Policy</a>
         </p2>
     </div>
 

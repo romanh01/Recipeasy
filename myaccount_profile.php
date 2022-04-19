@@ -12,6 +12,7 @@ include_once 'includes/dbh.inc.php';
             <div class="card_image myAccount">
                 <?php
                 if (isset($_SESSION["user_name"])) {
+                    echo "<br>";
                     echo "<p3>Welcome back " . $_SESSION["user_name"] . " !</p3>";
                 }
                 ?>

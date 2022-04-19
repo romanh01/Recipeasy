@@ -11,7 +11,7 @@ include_once 'includes/dbh.inc.php';
 
         $sql = "SELECT * FROM recipe";
         $result = $conn->query($sql);
-        /* Each row is printed on a new card */
+        /* Each column-rows are printed on a new card */
         while ($row = $result->fetch_assoc()) {
             echo "<div class='card'>
             <h2>" . $row["recipe_name"] . "</h2>
@@ -32,7 +32,7 @@ include_once 'includes/dbh.inc.php';
             <br>
             <br>
 
-             </div>";
+            </div>";
         }
         ?>
 

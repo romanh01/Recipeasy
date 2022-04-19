@@ -50,6 +50,7 @@ function username_exists($conn, $user_name, $user_email)
 
     mysqli_stmt_execute($stmt);
 
+    /* All binded parameters & results are in $stmt */
     $verdictData = mysqli_stmt_get_result($stmt);
 
     /* Get same username from database - if exists */
@@ -76,20 +77,21 @@ function create_user($conn, $user_email, $user_name, $user_pass)
         exit();
     }
     /* Hashing Password before connecting - Using default Hashing Algorithm in PHP */
-    $hashed_pass = password_hash($user_pass, PASSWORD_DEFAULT);
+    //$hashed_pass = password_hash($user_pass, PASSWORD_DEFAULT);
 
-    /* THREE s's for 3 STRING parameters - followed after */
-    mysqli_stmt_bind_param($stmt, "sss", $user_email, $user_name, $hashed_pass);
+    /* THREE s's for 3 STRING parameters - followed after , CHANGED TO user_pass (INSTEAD OF hashed_pass) as password_verify() was not working */
+    /* ALSO hashed_pass = ; - commented out above, and password_verify commented down below in user_login*/
+    mysqli_stmt_bind_param($stmt, "sss", $user_email, $user_name, $user_pass);
 
     mysqli_stmt_execute($stmt);
 
     mysqli_stmt_close($stmt);
 
-    header("location: ../myaccount_signup.php?error=none");
+    header("location: ../myaccount_login.php");
     exit();
 }
 
-function userLogin($conn, $user_name, $user_pass)
+function user_login($conn, $user_name, $user_pass)
 {
     /* REUSING Function, user_name could be an email - OR SQL Statement will make user_email TRUE & user_name FALSE */
     $username_exists = username_exists($conn, $user_name, $user_name);
@@ -104,7 +106,13 @@ function userLogin($conn, $user_name, $user_pass)
     $hashed_pass = $username_exists["user_pass"];
 
     /* Checking user-inputted pass matches with pass in user table*/
-    $pass_check = password_verify($user_pass, $hashed_pass);
+    //$pass_check = password_verify($user_pass, $hashed_pass);
+
+    if ($user_pass == $hashed_pass) {
+        $pass_check = TRUE;
+    } else {
+        $pass_check = FALSE;
+    }
 
     if ($pass_check == FALSE) {
         header("location: ../myaccount_login.php?error=wrongpass");

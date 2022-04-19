@@ -200,6 +200,20 @@ p4{
     line-height: 2px;
 }
 
+select{
+    width: 100%;
+    height: 1.55rem;
+    font-size: 16px;
+    background: var(--lighter-black);
+    color: var(--white);
+    margin-bottom: 30px;
+    margin-top: 20px;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
 @keyframes move {
     from
     {

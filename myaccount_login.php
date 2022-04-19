@@ -17,8 +17,8 @@ include_once 'includes/dbh.inc.php';
             <input type="submit" name="submit" value="Login!" class="submit_button">
         </form>
         <div class="signup_link">
-            <p style="margin-left:35px">
-                Not a member? <a href="myaccount_signup.php">Sign Up Now!</a>
+            <p style="margin-left:20px">
+                Not a member? <a href="myaccount_signup.php" style="text-decoration:none">Sign Up Now!</a>
             </p>
         </div>
     </div>
