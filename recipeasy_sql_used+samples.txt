@@ -1,0 +1,93 @@
+/* SQL USED IN myphpadmin - when setting up*/
+
+CREATE TABLE user
+(
+	user_id(32) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	user_email varchar(32) NOT NULL,
+    user_name varchar(32) NOT NULL,
+    user_pass varchar(32) NOT NULL
+);
+
+CREATE TABLE recipe
+(
+	recipe_id(64) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	recipe_name varchar(32) NOT NULL,
+    recipe_desc varchar(512) NOT NULL,
+    recipe_steps varchar(512) NOT NULL,
+	recipe_rating int(64)
+);
+
+INSERT INTO recipe
+(recipe_name, recipe_desc, recipe_steps, recipe_rating)
+VALUES
+('Fried Egg',
+ 'A fried egg is an egg which has been cracked and fried in a pan.',
+'Heat the Oil in a frying pan, gently break the egg in half and cook it for about 5 min, Sprinkle the egg with cooking oil and salt and place the fried on a plate, serve immediately.',
+75);
+
+INSERT INTO recipe
+(recipe_name, recipe_desc, recipe_steps, recipe_rating)
+VALUES
+('Banana Bread',
+ 'Type of bread made from mashed bananas. Often a moist, sweet, cake-like quick bread.',
+ 'Heat the oven to 180C fan, butter a 2lb loaf tin and line the base and sides with baking parchment, Cream 140g softened butter and 140g caster sugar until light and fluffy - then slowly add 2 beaten large eggs with 140g of flour, Fold the remaining flour - 1 tps baking powder and 2 mashed bananas, Por the mixture into the prepared tin and bake for 70 min, Cool in tin for 10 min - then remove wire rack, Mix 50g icing sugar with 2-3 tsp water to make a runny icing, Drizzle the icing across the top of the cake.',
+80);
+
+/* Samples to use: */
+
+Fusilli Pasta
+A variety of pasta which is about one inch long and has the shape of four ascending, entwined, parallel spirals.
+Fill a large saucepan with water, put the lid on and bring to the boil over a high heat, Add a good pinch of sea salt, Once the water is boiling, stir in the pasta, Cook the pasta according to the packet instructions. To tell if your pasta is cooked, try a piece about a minute or so before the end of the cooking time, Scoop out a mugful of the starchy cooking water and set aside, Drain the pasta in a colander over the sink. Now it’s ready to toss through your favourite sauce.
+85
+
+Basmati Rice
+Basmati rice is a type of aromatic rice that is known for its rich floral and spicy aroma and nutty taste.
+Gather the ingredients, Rinse the rice until the water runs clear. Drain in a colander and set aside, In a medium saucepan, bring the 2 cups of water to a boil. Add the salt, stir, and then add the rinsed and drained rice. Stir with a fork, Reduce the heat, cover the rice, and let it simmer for 20 minutes. Check it after 15 minutes to see if all the water has evaporated. If it has, the rice is ready. If not, replace the lid and let the rice simmer an additional 5 minutes, Remove from the heat, fluff with a fork, and transfer into a serving dish.You can also stir in 1 tablespoon of butter or add chopped parsley or other herbs to the pot before serving,Enjoy.
+75
+
+/* OTHER INFO: */
+
+Project Location:
+C:\xampp\htdocs\recipeasy
+
+\images
+	-add_recipes.jpg
+	-current_recipes.jpg
+	-logo.png
+	-modify_recipe.jpg
+	-my_account.jpg
+	-recipeasy_logo_courgette.png
+	-recipeasy_logo_courgette_2000.png
+
+\includes:
+	-add_recipes.inc.php
+	-dbh.inc.php
+	-login.inc.php
+	-logout.inc.php
+	-modifyrecipes.inc.php
+	-signup.inc.php
+	-signup_functions.inc.php
+
+\
+	-addrecipes.php
+	-currentrecipes.php
+	-footer.php
+	-header.php
+	-index.php
+	-modifyrecipes.php
+	-modifyrecipesselected.php
+	-myaccount_login.php
+	-myaccount_profile.php
+	-myaccount_signup.php
+	-style.css
+
+/* IF:*/
+
+style.css does NOT update css
+	- change filename to 'styles.css' or back to 'style.css'
+	- change filename used for stylesheey in header.php
+	
+	
+	
+
+
