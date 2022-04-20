@@ -27,7 +27,7 @@ if (isset($_POST["submit"])) {
 
     mysqli_stmt_close($stmt);
 
-    header("location: ../myaccount_index.php");
+    header("location: ../index.php");
     exit();
 } else {
     header("location: ../addrecipes.php");

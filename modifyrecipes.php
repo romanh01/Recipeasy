@@ -12,7 +12,7 @@ include_once 'includes/dbh.inc.php';
         <h2>Choose a Recipe to modify</h2>
         <br>
         <form action="includes/modifyrecipes.inc.php" method="post">
-            <select name="recipenameselect[]">
+            <select name="recipenameselect">
                 <?php
 
                 $sql = "SELECT * FROM recipe";
@@ -21,7 +21,8 @@ include_once 'includes/dbh.inc.php';
                 /* Only row with column name - recipe_name is inserted after fetch to insert as an option in form */
                 while ($row = $result->fetch_assoc()) {
                     $this_row = $row["recipe_name"];
-                    echo "<option value='recipe_name'>$this_row</option>";
+                    $this_id = $row["recipe_id"];
+                    echo "<option value='$this_id'>$this_row</option>";
                 }
                 ?>
             </select>
