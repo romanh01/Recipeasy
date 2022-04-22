@@ -12,9 +12,13 @@ C20390201
 Perform CRUD Operations:
 
 Create a Recipe
+
 Read Recipe(s)
+
 Update Recipe(s)
+
 Delete a Recipe
+
 
 Implement a User Sign-Up / Login & Logout System 
 
@@ -31,7 +35,7 @@ Implement a User Sign-Up / Login & Logout System
  
 ## Included PHP Files & their Description:
 
-\includes
+\includes\
 
 	-add_recipes.inc.php
                An included process - used to accept a Form & excecute prepared SQL Insert statement to add a Recipe to the 'recipe' table in the recipeasy Database.
@@ -56,8 +60,8 @@ Implement a User Sign-Up / Login & Logout System
 
 .\
 
-  -addrecipes.php
-             Form to input data on a Recipe to create it.
+  	-addrecipes.php
+             Form to input data on a Recipe - to create it.
              
 	-currentrecipes.php
                   Display Recipes in the database - using an associative array.
@@ -81,7 +85,7 @@ Implement a User Sign-Up / Login & Logout System
                   Form used to Log User in.
                   
 	-myaccount_profile.php
-                    After User Logs in - this page open after choosing My Account, an option to Log out is displayed.
+                    After User Logs in - this page opens after choosing My Account, an option to Log out is displayed.
                     
 	-myaccount_signup.php
                     Link to this option appears below Login Form.
